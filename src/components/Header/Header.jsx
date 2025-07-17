@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
 
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -40,6 +41,18 @@ export default function Header() {
             </a>
           </li>
         </ul>
+        <lu className={styles.socialLinks}>
+          <li>
+            <a href="https://github.com/WalterJiron" target="_blank">
+              <FaGithub />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/WalterJiron">
+              <TbFileCv />
+            </a>
+          </li>
+        </lu>
       </nav>
       <div className={styles.hamburger} onClick={toggleMenu}>
         {menuActive ? <FaTimes /> : <FaBars />}

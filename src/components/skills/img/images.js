@@ -8,6 +8,7 @@ import nestjsicono from "./iconNestJS.png";
 import sqlservericono from "./iconSqlServer.png";
 import dockericono from "./iconDocker.png";
 import reacticono from "./iconReact.png";
+import javaicono from "./iconJava.png";
 
 export default {
     iconoJs: jsicono,
@@ -20,4 +21,5 @@ export default {
     iconoSqlServer: sqlservericono,
     iconoDocker: dockericono,
     iconoReact: reacticono,
+    iconoJava: javaicono,
 }

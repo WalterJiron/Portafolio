@@ -17,6 +17,7 @@ export default function Skills() {
   const learningSkills = [
     { name: "Docker", icon: imagenes.iconoDocker },
     { name: "React", icon: imagenes.iconoReact },
+    { name: "Java", icon: imagenes.iconoJava },
   ];
 
   return (
