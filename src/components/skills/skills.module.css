@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.skillsSection h2:hover {
+    text-shadow: 0 0 2px #714b2f;
+}
+
 .skillsSection h3 {
     margin: 0;
     font-size: 1rem;
@@ -43,7 +47,9 @@
 
 .skillItem:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(10, 209, 244, 0.434);
+    box-shadow: 0 4px 12px #714b2f;
+    color: #9c6238;
+
 }
 
 .skillIcon {

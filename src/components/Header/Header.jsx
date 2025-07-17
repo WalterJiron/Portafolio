@@ -14,6 +14,14 @@ export default function Header() {
     setMenuActive(false);
   };
 
+  const AlertCV = () => {
+    globalThis.Swal.fire({
+      icon: "error",
+      title: "En construccion",
+      text: "El C.V pronto estara disponible.!",
+    });
+  };
+
   return (
     <header
       className={`${styles.header} ${menuActive ? styles["menu-open"] : ""}`}
@@ -48,9 +56,9 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="https://github.com/WalterJiron">
-              <TbFileCv />
-            </a>
+            <div /*href="#" target="_blank" */ onClick={AlertCV}>
+              <TbFileCv style={{ color: "green" }} />
+            </div>
           </li>
         </ul>
       </nav>

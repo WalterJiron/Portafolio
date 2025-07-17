@@ -1,13 +1,14 @@
 import style from "./App.module.css";
 import Contact from "./components/contact/contact";
 import Header from "./components/Header/Header";
-import Project from "./components/project/project";
+import Project from "./components/projects/project";
 import Skills from "./components/skills/skills";
 
 export default function App() {
   const styleContainer = {
+    marginTop: "4rem",
     scrollMarginTop: "4rem",
-    margin: "4rem 0",
+    marginBottom: "4rem",
   };
   const combinedStyleContainer = {
     ...styleContainer,
@@ -21,7 +22,7 @@ export default function App() {
       <main id="main">
         <section id="intro" className={style.intro} style={styleContainer}>
           <h1>
-            Walter Alexei <br /> Developer junior
+            Walter Alexei Amador Jirón. <br /> Developer Backend
           </h1>
           <h2>
             Soy Ingeniero en Sistemas de Información, con una profunda pasión
@@ -38,13 +39,13 @@ export default function App() {
 
         <Skills />
       </main>
-      <section id="project" style={combinedStyleContainer}>
-        <Project />
-      </section>
+      {/* Projects created */}
+      <Project />
 
-      <section id="contact" style={styleContainer}>
+      <footer>
+        {/* Contact section */}
         <Contact />
-      </section>
+      </footer>
     </>
   );
 }
