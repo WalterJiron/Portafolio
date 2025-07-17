@@ -10,6 +10,7 @@
   color: #714b2f;
   /*rgba(255, 255, 255, 0.87)*/
   background-color: #f0f0f0;
+  max-width: 100rem;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

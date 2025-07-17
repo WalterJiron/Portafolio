@@ -41,7 +41,7 @@ export default function Header() {
             </a>
           </li>
         </ul>
-        <lu className={styles.socialLinks}>
+        <ul className={styles.socialLinks}>
           <li>
             <a href="https://github.com/WalterJiron" target="_blank">
               <FaGithub />
@@ -52,7 +52,7 @@ export default function Header() {
               <TbFileCv />
             </a>
           </li>
-        </lu>
+        </ul>
       </nav>
       <div className={styles.hamburger} onClick={toggleMenu}>
         {menuActive ? <FaTimes /> : <FaBars />}
