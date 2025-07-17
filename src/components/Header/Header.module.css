@@ -1,0 +1,97 @@
+:root {
+    --background_heder: #abacad;
+}
+
+.header {
+    background: var(--background_heder);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.785);
+}
+
+.header.menu-open {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ba8903;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .header {
+        position: relative;
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--background_heder);
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu.active {
+        max-height: inherit;
+        padding: 0.5rem 0;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu li {
+        width: 90%;
+        padding: 0.5rem 0;
+
+        a {
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
