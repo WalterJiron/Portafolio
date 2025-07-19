@@ -145,7 +145,7 @@ export default function Contact() {
                 onClick={downloadPdf}
               >
                 <TbFileCv style={{ color: "green" }} />
-                <span>CV</span>
+                <span>Currículum Vitae</span>
               </a>
             </li>
           </ul>

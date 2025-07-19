@@ -56,6 +56,7 @@ export default function Header() {
           <li>
             <a href="https://github.com/WalterJiron" target="_blank">
               <FaGithub />
+              <span>GitHub</span>
             </a>
           </li>
           <li>
@@ -66,6 +67,7 @@ export default function Header() {
               onClick={downloadPdf}
             >
               <TbFileCv style={{ color: "green" }} />
+              <span>CV</span>
             </a>
           </li>
         </ul>

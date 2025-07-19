@@ -42,10 +42,8 @@ export default function App() {
       {/* Projects created */}
       <Project />
 
-      <footer>
-        {/* Contact section */}
-        <Contact />
-      </footer>
+      {/* Contact section */}
+      <Contact />
     </>
   );
 }
