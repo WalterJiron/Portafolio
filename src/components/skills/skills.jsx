@@ -15,6 +15,7 @@ export default function Skills() {
     { name: "Linux", icon: imagenes.iconoLinux },
     { name: "SQL Server", icon: imagenes.iconoSqlServer },
     { name: "Thunder Client", icon: imagenes.iconoThunderClient },
+    { name: "Microsoft Office", icon: imagenes.iconoMicrosodtOftoffice },
   ];
 
   const learningSkills = [

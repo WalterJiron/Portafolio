@@ -14,12 +14,15 @@ export default function Header() {
     setMenuActive(false);
   };
 
-  const AlertCV = () => {
-    globalThis.Swal.fire({
-      icon: "error",
-      title: "En construccion",
-      text: "El C.V pronto estara disponible.!",
-    });
+  const downloadPdf = (e) => {
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = "/Walter_Jiron_CV.pdf";
+      link.download = "Walter_Jiron_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 1000);
   };
 
   return (
@@ -56,9 +59,14 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <div /*href="#" target="_blank" */ onClick={AlertCV}>
+            <a
+              href="/Walter_Jiron_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={downloadPdf}
+            >
               <TbFileCv style={{ color: "green" }} />
-            </div>
+            </a>
           </li>
         </ul>
       </nav>

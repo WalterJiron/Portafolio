@@ -12,6 +12,7 @@ import reacticono from "./iconReact.png";
 import javaicono from "./iconJava.png";
 import thunderClienticono from "./iconThunderClient.png";
 import fastapiIcon from "./iconfastapi.png"
+import microsodtOftofficeicono from "./iconMicrosoftOffice.png";
 
 export default {
     iconoJs: jsicono,
@@ -28,4 +29,5 @@ export default {
     iconoJava: javaicono,
     iconoThunderClient: thunderClienticono,
     iconoFastapi: fastapiIcon,
+    iconoMicrosodtOftoffice: microsodtOftofficeicono,
 }
