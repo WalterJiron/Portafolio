@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Hook para detectar la sección activa en el viewport
+ * Hook para detectar la seccion activa en el viewport
  * @param {string[]} sectionIds - IDs de las secciones a observar
  * @param {number} threshold - Umbral de visibilidad (0-1)
  * @returns {string} - ID de la sección activa
