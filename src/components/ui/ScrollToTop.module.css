@@ -1,0 +1,48 @@
+.scrollToTop {
+    position: fixed;
+    bottom: var(--space-8);
+    right: var(--space-8);
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg,
+            var(--color-primary-500),
+            var(--color-primary-600));
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    transition: all var(--transition-base);
+}
+
+.scrollToTop:hover {
+    background: linear-gradient(135deg,
+            var(--color-primary-600),
+            var(--color-primary-700));
+    box-shadow: var(--shadow-xl);
+}
+
+.scrollToTop:active {
+    transform: scale(0.95);
+}
+
+/* Modo oscuro */
+[data-theme="dark"] .scrollToTop {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scrollToTop {
+        bottom: var(--space-6);
+        right: var(--space-6);
+        width: 48px;
+        height: 48px;
+        font-size: var(--text-lg);
+    }
+}

@@ -1,4 +1,3 @@
-import jsicono from "./iconoJS.png";
 import tsicono from "./iconoTs.png"
 import pythonicono from "./iconPython.png";
 import htmlicono from "./iconHtml.png";
@@ -11,11 +10,9 @@ import dockericono from "./iconDocker.png";
 import reacticono from "./iconReact.png";
 import javaicono from "./iconJava.png";
 import thunderClienticono from "./iconThunderClient.png";
-import fastapiIcon from "./iconfastapi.png"
-import microsodtOftofficeicono from "./iconMicrosoftOffice.png";
+import iconPostgreSQL from "./iconPostgreSQL.png";
 
 export default {
-    iconoJs: jsicono,
     iconoTs: tsicono,
     iconoPy: pythonicono,
     iconoHtml: htmlicono,
@@ -28,6 +25,5 @@ export default {
     iconoReact: reacticono,
     iconoJava: javaicono,
     iconoThunderClient: thunderClienticono,
-    iconoFastapi: fastapiIcon,
-    iconoMicrosodtOftoffice: microsodtOftofficeicono,
+    iconPostgreSQL,
 }

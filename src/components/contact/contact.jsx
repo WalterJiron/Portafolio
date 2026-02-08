@@ -94,25 +94,56 @@ export default function Contact() {
       <h2>Contacto</h2>
 
       <footer className={styles.contactContainer}>
-        {/* Formulario */}
+        {/* Formulario MEJORADO */}
         <div className={styles.formContainer}>
           <form ref={form} onSubmit={sendEmail} className={styles.contactForm}>
-            <label>Nombre</label>
-            <input type="text" name="name" required />
+            <div className={styles.formGroup}>
+              <label htmlFor="name">Nombre completo</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+                disabled={isSending}
+              />
+            </div>
 
-            <label>Correo Electrónico</label>
-            <input type="email" name="email" required />
+            <div className={styles.formGroup}>
+              <label htmlFor="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="tu@email.com"
+                disabled={isSending}
+              />
+            </div>
 
-            <label>Mensaje</label>
-            <textarea name="message" rows="5" required />
+            <div className={styles.formGroup}>
+              <label htmlFor="message">Tu mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="¿En qué puedo ayudarte?"
+                disabled={isSending}
+              />
+            </div>
 
-            <button type="submit" disabled={isSending}>
-              {isSending ? "Enviando..." : "Enviar Mensaje"}
+            <button
+              type="submit"
+              disabled={isSending}
+              className={isSending ? styles.sending : ""}
+            >
+              {isSending ? "Enviando..." : "Enviar mensaje"}
             </button>
           </form>
         </div>
 
-        {/* Contactos */}
+        {/* Contactos (sin cambios) */}
         <div className={styles.linksContainer}>
           <h3 className={styles.linksTitle}>Puedes encuéntrame:</h3>
           <ul className={styles.contactsList}>

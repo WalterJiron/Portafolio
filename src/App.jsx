@@ -1,49 +1,28 @@
-import style from "./App.module.css";
-import Contact from "./components/contact/contact";
+import React from "react";
 import Header from "./components/Header/Header";
-import Project from "./components/projects/project";
+import Hero from "./components/Hero/Hero";
 import Skills from "./components/skills/skills";
+import Project from "./components/projects/project";
+import Contact from "./components/contact/contact";
+import "./index.css";
 
-export default function App() {
-  const styleContainer = {
-    marginTop: "4rem",
-    scrollMarginTop: "4rem",
-    marginBottom: "4rem",
-  };
-  const combinedStyleContainer = {
-    ...styleContainer,
-    height: "100vh",
-  };
-
+const App = () => {
   return (
     <>
+      <a href="#main" className="skip-link">
+        Saltar al contenido
+      </a>
+
       <Header />
 
       <main id="main">
-        <section id="intro" className={style.intro} style={styleContainer}>
-          <h1>
-            Walter Alexei Amador Jirón. <br /> Developer Backend
-          </h1>
-          <h2>
-            Soy Ingeniero en Sistemas de Información, con una profunda pasión
-            por la programación, el desarrollo de software, codigo limpio,
-            buenas practicas y la resolución de problemas tecnológicos.
-          </h2>
-          <p>
-            Me enfoco en construir soluciones prácticas, eficientes y
-            escalables. Constantemente estoy aprendiendo nuevas tecnologías y
-            perfeccionando mis habilidades para crecer como profesional en el
-            mundo del desarrollo, enfocado en desarrollo backend.
-          </p>
-        </section>
-
+        <Hero />
         <Skills />
+        <Project />
+        <Contact />
       </main>
-      {/* Projects created */}
-      <Project />
-
-      {/* Contact section */}
-      <Contact />
     </>
   );
-}
+};
+
+export default App;
