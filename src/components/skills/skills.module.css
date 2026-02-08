@@ -2,10 +2,15 @@
 .skillsSection {
     scroll-margin-top: 4rem;
     padding: 4rem 2rem;
-    background-color: #f9f9f9;
+    background-image: url('./skillFo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     margin: 2rem auto;
+    margin-top: 4rem;
 }
 
 .skillsSection h2 {
@@ -25,9 +30,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #9c6238, #714b2f);
-    border-radius: 2px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-300), var(--primary-500));
+    border-radius: var(--radius-full);
 }
 
 /* Sección de habilidades principales */

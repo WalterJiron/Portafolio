@@ -28,7 +28,6 @@ export default function Contact() {
       },
     });
 
-    // Por si tarda mas de 15 segundos
     const timeoutId = setTimeout(() => {
       timedOut = true;
       setIsSending(false);
