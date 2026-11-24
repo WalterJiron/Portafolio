@@ -3,9 +3,9 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import "./index.css";
 
-const Skills  = lazy(() => import("./components/skills/Skills"));
-const Project = lazy(() => import("./components/projects/Project"));
-const Contact = lazy(() => import("./components/contact/Contact"));
+const Skills  = lazy(() => import("./components/skills/skills"));
+const Project = lazy(() => import("./components/projects/project"));
+const Contact = lazy(() => import("./components/contact/contact"));
 
 const App = () => {
   return (
