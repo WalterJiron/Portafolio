@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import projects from "./data.projects.js";
 import ProjectCard from "./ProjectCard";
 import ProjectLightbox from "./ProjectLightbox";
