@@ -4,8 +4,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walter Alexei Amador Jirón</title>
-  <script async src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var isDark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.add(isDark ? "dark" : "light");
+    })();
+  </script>
+
+  <title>Walter Alexei Amador Jirón | Backend Developer</title>
+  <meta name="description" content="Portfolio de Walter Alexei Amador Jirón, Ingeniero en Sistemas especializado en desarrollo Backend con NestJS, FastAPI, Python, TypeScript y Flutter. Basado en Nicaragua." />
+  <meta name="keywords" content="Walter Jiron, Backend Developer, NestJS, FastAPI, Python, TypeScript, Flutter, Dart, PostgreSQL, Docker, Ingeniero en Sistemas, Nicaragua" />
+  <meta name="author" content="Walter Alexei Amador Jirón" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://walteralexei-portafolio.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://walteralexei-portafolio.vercel.app/" />
+  <meta property="og:title" content="Walter Alexei Amador Jirón | Backend Developer" />
+  <meta property="og:description" content="Ingeniero en Sistemas especializado en Backend: NestJS, FastAPI, Python, TypeScript, Flutter y más." />
+  <meta property="og:locale" content="es_NI" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Walter Alexei Amador Jirón | Backend Developer" />
+  <meta name="twitter:description" content="Ingeniero en Sistemas especializado en Backend: NestJS, FastAPI, Python, TypeScript, Flutter y más." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+  </noscript>
+
+  <meta name="theme-color" content="#f97316" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Walter Alexei Amador Jirón",
+    "jobTitle": "Backend Developer",
+    "url": "https://walteralexei-portafolio.vercel.app/",
+    "sameAs": [
+      "https://github.com/WalterJiron",
+      "https://www.linkedin.com/in/walter-alexei-amador-jirón-775991364"
+    ],
+    "knowsAbout": ["NestJS", "FastAPI", "TypeScript", "Python", "Flutter", "PostgreSQL", "Docker"]
+  }
+  </script>
 </head>
 
 <body>
