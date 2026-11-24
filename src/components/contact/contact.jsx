@@ -12,18 +12,30 @@ const SOCIAL_LINKS = [
     label: "GitHub",
     sub: "@WalterJiron",
     href: "https://github.com/WalterJiron",
+    extra: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   },
   {
     icon: FaLinkedin,
     label: "LinkedIn",
     sub: "Walter Alexei Amador Jirón",
     href: "https://www.linkedin.com/in/walter-alexei-amador-jirón-775991364",
+    extra: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   },
   {
     icon: FaEnvelope,
     label: "Correo",
     sub: "walteralexei01@gmail.com",
     href: "mailto:walteralexei01@gmail.com",
+    extra: {
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   },
   {
     icon: TbFileCv,
@@ -39,14 +51,14 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Contact() {
-  const form       = useRef();
+  const form = useRef();
   const sectionRef = useRef(null);
-  const animated   = useRef(false);
+  const animated = useRef(false);
   const [status, setStatus] = useState(null);
-  const [toast, setToast]   = useState(null);
+  const [toast, setToast] = useState(null);
 
-  const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-  const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
   useEffect(() => {
