@@ -1,69 +1,94 @@
-import React from "react";
-import { FaArrowDown } from "react-icons/fa";
-import styles from "./Hero.module.css";
+import React, { useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
+import HeroBackground from "./HeroBackground";
+import HeroScrollCue from "./HeroScrollCue";
+import { initHeroAnimations } from "./heroAnimations";
 
-const Hero = () => {
-  const handleScrollToSkills = () => {
-    const skillsSection = document.getElementById("skills");
-    if (skillsSection) {
-      skillsSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+const ROLES = ["Backend Developer", "Ingeniero en Sistemas"];
+
+export default function Hero() {
+  useEffect(() => {
+    initHeroAnimations();
+  }, []);
 
   return (
-    <section id="hero" className={styles.hero}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.badge}>
-            <span>👋 ¡Hola! Soy</span>
-          </div>
+    <section
+      id="hero"
+      className="section noise dot-grid relative overflow-hidden flex items-center min-h-svh pt-28 pb-16 md:pb-24"
+      style={{ background: "var(--bg)" }}
+    >
+      <HeroBackground />
 
-          <h1 className={styles.title}>
+      <div className="container relative" style={{ zIndex: 1 }}>
+        <div className="max-w-190">
+          <h1
+            className="hero-name mb-5 font-bold leading-[1.08] tracking-[-0.02em]"
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
+              color: "var(--text-primary)",
+            }}
+          >
             Walter Alexei
-            <span className={styles.highlight}> Amador Jirón</span>
+            <br />
+            <span className="text-gradient">Amador Jirón</span>
           </h1>
 
-          <h2 className={styles.subtitle}>
-            <span className={styles.role}>Backend Developer</span>
-            <span className={styles.separator}> • </span>
-            <span className={styles.role}>Ingeniero en Sistemas</span>
-          </h2>
+          <div className="hero-roles flex flex-wrap gap-2.5 mb-8">
+            {ROLES.map((role) => (
+              <span
+                key={role}
+                className="inline-block px-3.5 py-1.5 rounded-lg text-sm font-medium"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "var(--text-secondary)",
+                  background: "var(--bg-card)",
+                  border: "1px solid var(--border-alt)",
+                }}
+              >
+                {role}
+              </span>
+            ))}
+          </div>
 
-          <p className={styles.description}>
-            Me especializo en desarrollo backend, creando soluciones escalables
-            y eficientes con código limpio y buenas prácticas. Me apasiona
-            resolver problemas complejos y construir arquitecturas robustas.
+          <p
+            className="hero-desc max-w-145 text-[1.05rem] leading-[1.75] mb-10"
+            style={{
+              color: "var(--text-secondary)",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            Me especializo en desarrollo backend construyendo soluciones escalables
+            con código limpio y buenas prácticas. Apasionado por arquitecturas robustas
+            con <strong style={{ color: "var(--brand-text)", fontWeight: 600 }}>NestJS, FastAPI</strong> y
+            desarrollo móvil con <strong style={{ color: "var(--brand-text)", fontWeight: 600 }}>Flutter</strong>.
           </p>
 
-          <div className={styles.actions}>
-            <a href="#contact" className={styles.primaryBtn}>
-              Contactar
+          <div className="flex flex-wrap gap-3">
+            <a href="#contact" className="btn-primary hero-cta">
+              Contáctame
+            </a>
+            <a
+              href="https://github.com/WalterJiron"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost hero-cta"
+            >
+              <FaGithub /> GitHub
             </a>
             <a
               href="/Walter_Jiron_CV.pdf"
               download="Walter_Jiron_CV.pdf"
-              className={styles.secondaryBtn}
+              className="btn-ghost hero-cta"
             >
-              Descargar CV
+              <HiDownload /> Descargar CV
             </a>
           </div>
         </div>
-
-        <div className={styles.arrowContainer}>
-          <button
-            className={styles.arrowButton}
-            onClick={handleScrollToSkills}
-            aria-label="Desplazarse a habilidades"
-          >
-            <FaArrowDown className={styles.arrowIcon} />
-          </button>
-        </div>
       </div>
+
+      <HeroScrollCue />
     </section>
   );
-};
-
-export default Hero;
+}
