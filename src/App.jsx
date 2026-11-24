@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Skills from "./components/skills/skills";
-import Project from "./components/projects/project";
-import Contact from "./components/contact/contact";
 import "./index.css";
+
+const Skills  = lazy(() => import("./components/skills/Skills"));
+const Project = lazy(() => import("./components/projects/Project"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 
 const App = () => {
   return (
@@ -12,14 +13,14 @@ const App = () => {
       <a href="#main" className="skip-link">
         Saltar al contenido
       </a>
-
       <Header />
-
       <main id="main">
         <Hero />
-        <Skills />
-        <Project />
-        <Contact />
+        <Suspense fallback={null}>
+          <Skills />
+          <Project />
+          <Contact />
+        </Suspense>
       </main>
     </>
   );
