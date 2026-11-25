@@ -5,7 +5,7 @@ export default [
     title: "Yosoy",
     description:
       "Aplicación de bienestar emocional con check-in diario, seguimiento de estado de ánimo y gestión de usuarios. Desarrollada con arquitectura cliente-servidor y API backend dedicada. Proyecto privado.",
-    tech: ["NestJS", "TypeScript", "PostgreSQL", "Flutter", "Docker"],
+    tech: ["FastAPI", "WebSocket", "Python", "PostgreSQL", "Flutter", "Docker"],
     link: null,
     webLink: null,
     images: [
